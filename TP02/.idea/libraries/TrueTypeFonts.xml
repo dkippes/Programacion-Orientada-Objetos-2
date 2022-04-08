@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="TrueTypeFonts">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/alex-brush.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/cmu-concrete.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/cmu-sans-serif.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/dejavu-fonts-ttf-2.37.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/cmu-serif.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/AndikaNewBasic-5.500.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/learning_curve_4.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/DoulosSILCompact-5.000.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/GentiumBasic_1102.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/cmu-bright.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/neo-euler.ttf.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/CharisSILCompact-5.000.zip!/" />
+      <root url="jar://$PROJECT_DIR$/cuisUniversity/TrueTypeFonts/cmu-typewriter.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
