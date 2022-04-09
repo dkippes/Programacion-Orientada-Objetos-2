@@ -10,9 +10,15 @@ public class DesarmadorNumeros {
 		this.numeros = new ArrayList<>();
 	}
 	
+	public DesarmadorNumeros addNumero(Integer numero) {
+		this.numeros.add(numero);
+		return this;
+	}
+	
 	public Integer numeroConMayorNumerosPares() {
-		if (this.numeros.isEmpty())
+		if (this.numeros.isEmpty()) {
 			return null;
+		}
 		Integer numeroMayor = this.numeros.get(0);
 		
 		for (Integer i : this.numeros) {

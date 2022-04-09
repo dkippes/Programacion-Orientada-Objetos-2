@@ -16,7 +16,7 @@ public class Counter {
 
 	public Counter addNumer(Integer numero) {
 		this.numeros.add(numero);
-		return this;		
+		return this;
 	}
 	
 	public int contarPares() {

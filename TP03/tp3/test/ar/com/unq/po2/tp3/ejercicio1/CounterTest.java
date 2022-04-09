@@ -1,18 +1,19 @@
-package ar.com.unq.po2.tp3;
+package ar.com.unq.po2.tp3.ejercicio1;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import ar.com.unq.po2.tp3.ejercicio1.Counter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Test de counter")
-class CounterTestCase {
+class CounterTest {
 	
 	Counter counter;
 
 	@BeforeEach
-	public void setUp() {
+	void setUp() {
 		counter = new Counter();
 		counter
 			.addNumer(1)
