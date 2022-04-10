@@ -9,9 +9,6 @@ public abstract class Empleado {
     protected Date fechaNacimiento;
     protected Double sueldoBasico;
 
-    public Empleado() {
-    }
-
     public Empleado(String nombre, String direccion, Boolean estadoCivil, Date fechaNacimiento, Double sueldoBasico) {
         this.nombre = nombre;
         this.direccion = direccion;
