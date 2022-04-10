@@ -6,49 +6,50 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class PointTest {
+	
+	Point point00;
+	Point point39;
+	Point point34;
+	Point point26;
 
 	@BeforeEach
 	void setUp() {
+		point00 = new Point();
+		point39 = new Point(3, 9);
+		point34 = new Point(3, 4);
+		point26 = new Point(2, 6);
 	}
 	
 	@Test
 	void testCreacionPorReferencia() {
-		Point point = new Point(3, 9);
-		assertEquals(point.getX(), 3);
-		assertEquals(point.getY(), 9);
+		assertEquals(point39.getX(), 3);
+		assertEquals(point39.getY(), 9);
 	}
 	
 	@Test
 	void testCreacionPorReferenciaSinParametros() {
-		Point point = new Point();
-		assertEquals(point.getX(), 0);
-		assertEquals(point.getY(), 0);
+		assertEquals(point00.getX(), 0);
+		assertEquals(point00.getY(), 0);
 	}
 	
 	@Test
 	void testMoviendoAOtraPosicion() {
 		// Arrange
-		Point point = new Point();
-		
 		// Act
-		point.moverAPosicion(3, 4);
+		point00.moverAPosicion(3, 4);
 		
 		// Assert
-		assertEquals(point.getX(), 3);
-		assertEquals(point.getY(), 4);
+		assertEquals(point00.getX(), 3);
+		assertEquals(point00.getY(), 4);
 	}
 	
 	@Test
 	void testSumarseConOtroPunto() {
-		// Arrange
-		Point point1 = new Point(3, 4);
-		Point point2 = new Point(2, 6);
-		
 		// Act
-		point1.sumarPuntos(point2);
+		point34.sumarPuntos(point26);
 		
 		// Assert
-		assertEquals(point1.getX(), 5);
-		assertEquals(point1.getY(), 10);
+		assertEquals(point34.getX(), 5);
+		assertEquals(point34.getY(), 10);
 	}
 }

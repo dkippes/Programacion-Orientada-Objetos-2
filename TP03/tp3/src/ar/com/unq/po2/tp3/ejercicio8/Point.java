@@ -1,5 +1,7 @@
 package ar.com.unq.po2.tp3.ejercicio8;
 
+import java.util.Objects;
+
 public class Point {
 	private int x;
 	private int y;
@@ -29,4 +31,18 @@ public class Point {
 	public int getY() {
 		return this.y;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Point other = (Point) obj;
+		return x == other.x && y == other.y;
+	}
+	
+	
 }
