@@ -2,7 +2,7 @@ package tp2.models;
 
 import java.util.Date;
 
-public class Empleado {
+public abstract class Empleado {
     protected String nombre;
     protected String direccion;
     protected Boolean estadoCivil;
@@ -25,21 +25,15 @@ public class Empleado {
         return (today.getYear() - fechaNacimiento.getYear());
     }
 
-    public Double calcularSueldoBruto() {
-        return null;
-    }
+    public abstract Double calcularSueldoBruto();
 
-    public Double calcularRetenciones() {
-        return null;
-    }
+    public abstract Double calcularRetenciones();
 
     public Double calcularSueldoNetoRestante() {
         return calcularSueldoBruto() - calcularRetenciones();
     }
 
-    public String getConceptos() {
-        return null;
-    }
+    public abstract String getConceptos();
 
     public String getNombre() {
         return nombre;

@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35af30af-0412-407c-9caf-dce27ec61331" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/asd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ar/com/unq/po2/tp3/CounterTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ar/com/unq/po2/tp3/CounterTestCase.java" afterDir="false" />
-    </list>
+    <list default="true" id="35af30af-0412-407c-9caf-dce27ec61331" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +101,7 @@
       <updated>1649383378519</updated>
       <workItem from="1649383379835" duration="194000" />
       <workItem from="1649383778035" duration="1284000" />
+      <workItem from="1649533029389" duration="1000" />
     </task>
     <servers />
   </component>
