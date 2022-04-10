@@ -44,11 +44,11 @@ public class EmpleadoPermanente extends Empleado {
     }
 
     public String getConceptos() {
-        return "\nSueldo Basico: " + this.sueldoBasico + "\n" +
-                "Asignacion por hijo: " + asignacionPorHijo() + "\n" +
-                "Asignacion por conyuge: " + asignacionPorConyuge() + "\n" +
-                "Antiguedad: " + antiguedad() + "\n" +
-                "Obra Social: " + obraSocial() + "\n" +
-                "Aportes Jubilatorios: " + aportesJubilatorios() + "\n";
+        return "Sueldo Basico: " + this.sueldoBasico +
+                " || Asignacion por hijo: " + asignacionPorHijo() +
+                " || Asignacion por conyuge: " + asignacionPorConyuge() +
+                " || Antiguedad: " + antiguedad() +
+                " || Obra Social: " + obraSocial() +
+                " || Aportes Jubilatorios: " + aportesJubilatorios();
     }
 }

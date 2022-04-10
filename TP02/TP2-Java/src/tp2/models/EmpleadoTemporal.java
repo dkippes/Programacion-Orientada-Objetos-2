@@ -1,8 +1,6 @@
 package tp2.models;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class EmpleadoTemporal extends Empleado {
     private Date fechaFinDesignacion;
@@ -43,8 +41,8 @@ public class EmpleadoTemporal extends Empleado {
     }
 
     public String getConceptos() {
-        return "\nSueldo Basico: " + sueldoBasico() + "\n" +
-                "Obra Social: " + obraSocial() + "\n" +
-                "Aportes Jubilatorios: " + aportesJubilatorios() + "\n";
+        return "Sueldo Basico: " + sueldoBasico() +
+                " || Obra Social: " + obraSocial() +
+                " || Aportes Jubilatorios: " + aportesJubilatorios();
     }
 }

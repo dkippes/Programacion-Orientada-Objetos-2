@@ -45,12 +45,7 @@ public class Empresa {
 
     public void liquidacionSueldos() {
         for (Empleado e: empleados) {
-            ReciboHaberes reciboHaberes = new ReciboHaberes();
-            reciboHaberes.setNombreEmpleado(e.getNombre());
-            reciboHaberes.setDireccion(e.getDireccion());
-            reciboHaberes.setSueldoBruto(e.calcularSueldoBruto());
-            reciboHaberes.setSueldoNeto(e.calcularSueldoNetoRestante());
-            reciboHaberes.setDesgloseConceptos(e.getConceptos());
+            ReciboHaberes reciboHaberes = new ReciboHaberes(e);
             this.reciboHaberes.add(reciboHaberes);
         }
     }
