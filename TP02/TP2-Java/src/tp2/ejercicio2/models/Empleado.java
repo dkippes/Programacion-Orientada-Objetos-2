@@ -1,6 +1,7 @@
 package tp2.ejercicio2.models;
 
 import java.util.Date;
+import java.util.Map;
 
 public abstract class Empleado {
     protected String nombre;
@@ -30,5 +31,5 @@ public abstract class Empleado {
         return calcularSueldoBruto() - calcularRetenciones();
     }
 
-    public abstract String getConceptos();
+    public abstract Map<String, Object> getConceptos();
 }

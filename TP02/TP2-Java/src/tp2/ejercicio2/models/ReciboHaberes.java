@@ -1,20 +1,23 @@
 package tp2.ejercicio2.models;
 
+import java.util.Date;
+import java.util.Map;
+
 public class ReciboHaberes {
-    private Empleado empleado;
+    private String nombreEmpleado;
+    private String direccion;
+    private Date fechaEmision;
+    private Double sueldoBruto;
+    private Double sueldoNeto;
+    private Map<String, Object> conceptos;
 
-    public ReciboHaberes(Empleado empleado) {
-        this.empleado = empleado;
-    }
-
-    @Override
-    public String toString() {
-        return "ReciboHaberes{" +
-                "\nnombreEmpleado='" + empleado.nombre + '\'' +
-                ", \ndireccion='" + empleado.direccion + '\'' +
-                ", \nsueldoBruto=" + empleado.calcularSueldoBruto() +
-                ", \nsueldoNeto=" + empleado.calcularSueldoNetoRestante() +
-                ", \ndesgloseConceptos='" + empleado.getConceptos() + '\'' +
-                '}' + "\n";
+    public ReciboHaberes generarReciboHaberes(Empleado empleado) {
+        this.nombreEmpleado = empleado.nombre;
+        this.direccion = empleado.direccion;
+        this.fechaEmision = new Date();
+        this.sueldoBruto = empleado.calcularSueldoBruto();
+        this.sueldoNeto = empleado.calcularSueldoNetoRestante();
+        this.conceptos = empleado.getConceptos();
+        return this;
     }
 }

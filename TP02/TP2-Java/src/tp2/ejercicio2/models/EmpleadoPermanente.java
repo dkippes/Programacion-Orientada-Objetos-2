@@ -1,6 +1,8 @@
 package tp2.ejercicio2.models;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EmpleadoPermanente extends Empleado {
     private Integer cantidadHijos;
@@ -43,12 +45,14 @@ public class EmpleadoPermanente extends Empleado {
         return (calcularSueldoBruto() * 0.15);
     }
 
-    public String getConceptos() {
-        return "Sueldo Basico: " + this.sueldoBasico +
-                " || Asignacion por hijo: " + asignacionPorHijo() +
-                " || Asignacion por conyuge: " + asignacionPorConyuge() +
-                " || Antiguedad: " + antiguedad() +
-                " || Obra Social: " + obraSocial() +
-                " || Aportes Jubilatorios: " + aportesJubilatorios() + "\n";
+    public Map<String, Object> getConceptos() {
+        Map<String, Object> conceptos = new HashMap<>();
+        conceptos.put("Sueldo Basico", this.sueldoBasico);
+        conceptos.put("Asignacion por hijo", asignacionPorHijo());
+        conceptos.put("Asignacion por conyuge", asignacionPorConyuge());
+        conceptos.put("Antiguedad", antiguedad());
+        conceptos.put("Obra Social", obraSocial());
+        conceptos.put("Aportes Jubilatorios", aportesJubilatorios());
+        return conceptos;
     }
 }

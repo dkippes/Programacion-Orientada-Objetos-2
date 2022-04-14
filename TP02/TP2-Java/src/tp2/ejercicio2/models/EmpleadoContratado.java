@@ -1,6 +1,8 @@
 package tp2.ejercicio2.models;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EmpleadoContratado extends Empleado {
     private Integer nroContrato;
@@ -23,9 +25,11 @@ public class EmpleadoContratado extends Empleado {
     }
 
     @Override
-    public String getConceptos() {
-        return "Sueldo Basico: " + this.sueldoBasico +
-                " || Gastos Administrativos Contractuales: " + gastosAdministrativosContractuales() + "\n";
+    public Map<String, Object> getConceptos() {
+        Map<String, Object> conceptos = new HashMap<>();
+        conceptos.put("Sueldo Basico", this.sueldoBasico);
+        conceptos.put("Gastos Administrativos Contractuales", gastosAdministrativosContractuales());
+        return conceptos;
     }
 
     private Double gastosAdministrativosContractuales() {

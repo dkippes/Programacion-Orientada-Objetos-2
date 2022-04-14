@@ -1,6 +1,8 @@
 package tp2.ejercicio2.models;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EmpleadoTemporal extends Empleado {
     private Date fechaFinDesignacion;
@@ -40,9 +42,11 @@ public class EmpleadoTemporal extends Empleado {
         return (calcularSueldoBruto() * 0.1) + (this.cantidadHorasExtras * 5);
     }
 
-    public String getConceptos() {
-        return "Sueldo Basico: " + sueldoBasico() +
-                " || Obra Social: " + obraSocial() +
-                " || Aportes Jubilatorios: " + aportesJubilatorios() + "\n";
+    public Map<String, Object> getConceptos() {
+        Map<String, Object> conceptos = new HashMap<>();
+        conceptos.put("Sueldo Basico", sueldoBasico());
+        conceptos.put("Obra Social", obraSocial());
+        conceptos.put("Aportes Jubilatorios", aportesJubilatorios());
+        return conceptos;
     }
 }

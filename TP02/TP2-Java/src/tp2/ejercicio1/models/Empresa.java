@@ -50,8 +50,4 @@ public class Empresa {
             this.reciboHaberes.add(reciboHaberes);
         }
     }
-
-    public List<ReciboHaberes> getReciboHaberes() {
-        return reciboHaberes;
-    }
 }
