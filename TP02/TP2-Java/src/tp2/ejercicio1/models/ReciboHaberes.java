@@ -1,14 +1,7 @@
 package tp2.ejercicio1.models;
 
 public class ReciboHaberes {
-    private Empleado empleado;
-
-    public ReciboHaberes(Empleado empleado) {
-        this.empleado = empleado;
-    }
-
-    @Override
-    public String toString() {
+    public String generarReciboHaberes(Empleado empleado) {
         return "ReciboHaberes{" +
                 "\nnombreEmpleado='" + empleado.nombre + '\'' +
                 ", \ndireccion='" + empleado.direccion + '\'' +

@@ -3,8 +3,8 @@ package ar.com.unq.po2.tp3.ejercicio8;
 import java.util.Objects;
 
 public class Point {
-	private int x;
-	private int y;
+	private Integer x = 0;
+	private Integer y = 0;
 	
 	public Point() { // new Point()
 	}

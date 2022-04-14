@@ -45,7 +45,8 @@ public class Empresa {
 
     public void liquidacionSueldos() {
         for (Empleado e: empleados) {
-            ReciboHaberes reciboHaberes = new ReciboHaberes(e);
+            ReciboHaberes reciboHaberes = new ReciboHaberes();
+            reciboHaberes.generarReciboHaberes(e);
             this.reciboHaberes.add(reciboHaberes);
         }
     }
