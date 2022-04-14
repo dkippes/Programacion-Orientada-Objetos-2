@@ -34,21 +34,16 @@ public class PointTest {
 	
 	@Test
 	void testMoviendoAOtraPosicion() {
-		// Arrange
-		// Act
 		point00.moverAPosicion(3, 4);
 		
-		// Assert
 		assertEquals(point00.getX(), 3);
 		assertEquals(point00.getY(), 4);
 	}
 	
 	@Test
 	void testSumarseConOtroPunto() {
-		// Act
 		point34.sumarPuntos(point26);
 		
-		// Assert
 		assertEquals(point34.getX(), 5);
 		assertEquals(point34.getY(), 10);
 	}

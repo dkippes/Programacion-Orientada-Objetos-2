@@ -1,15 +1,15 @@
 package ar.com.unq.po2.tp3.ejercicio8;
 
-import java.util.Objects;
-
 public class Point {
-	private Integer x = 0;
-	private Integer y = 0;
+	private Integer x;
+	private Integer y;
 	
-	public Point() { // new Point()
+	public Point() {
+		this.x = 0;
+		this.y = 0;
 	}
 	
-	public Point(int x, int y) { //new Point(3, 9)
+	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
@@ -32,7 +32,7 @@ public class Point {
 		return this.y;
 	}
 
-	@Override
+	@Override // Se usa en el ejercicio 9
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

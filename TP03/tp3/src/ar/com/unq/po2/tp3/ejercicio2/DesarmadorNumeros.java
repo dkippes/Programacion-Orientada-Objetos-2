@@ -4,26 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DesarmadorNumeros {
-	private List<Integer> numeros;
 	
-	public DesarmadorNumeros() {
-		this.numeros = new ArrayList<>();
-	}
-	
-	public DesarmadorNumeros addNumero(Integer numero) {
-		this.numeros.add(numero);
-		return this;
-	}
-	
-	public Integer numeroConMayorNumerosPares() {
-		if (this.numeros.isEmpty()) {
-			return null;
+	public int numeroConMayorNumerosPares(int[] numeros) throws Exception {
+		if (numeros.length == 0) {
+			throw new Exception("No puede ser un array vacio");
 		}
-		Integer numeroMayor = this.numeros.get(0);
+		int numeroMayor = numeros[0];
 		
-		for (Integer i : this.numeros) {
-			Integer actual = contarNumerosPares(numeroMayor);
-			Integer temp = contarNumerosPares(i);
+		for (int i : numeros) {
+			int actual = contarNumerosPares(numeroMayor);
+			int temp = contarNumerosPares(i);
 			if (temp > actual) {
 				numeroMayor = i;
 			}
@@ -31,11 +21,11 @@ public class DesarmadorNumeros {
 		return numeroMayor;
 	}
 	
-	private Integer contarNumerosPares(Integer numero) {
-		Integer contarPares = 0;
-		Integer i = numero;
+	private int contarNumerosPares(int numero) {
+		int contarPares = 0;
+		int i = numero;
 		while(i > 0) {
-			Integer decimal = i % 10;
+			int decimal = i % 10;
 			if ( decimal % 2 == 0 ) {
 				contarPares++;
 			}

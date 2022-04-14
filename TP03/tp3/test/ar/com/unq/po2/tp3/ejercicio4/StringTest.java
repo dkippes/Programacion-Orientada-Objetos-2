@@ -6,9 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class StringTest {
-	String a;
-	String s;
-	String t;
+	private String a;
+	private String s;
+	private String t;
 	
 	@BeforeEach
 	void setUp() {

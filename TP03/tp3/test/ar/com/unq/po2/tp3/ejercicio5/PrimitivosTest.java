@@ -9,7 +9,8 @@ import org.junit.jupiter.api.Test;
 public class PrimitivosTest {
 	
 	/*
-	 1) Son datos que derivan de la clase Wrapper, pero como tal no tiene metodos ni se necesita instanciar
+	 1) Son datos que derivan de la clase Wrapper, pero como tal no tiene metodos ni se necesita instanciar,
+	 se encuentran directo en el stack de memoria y no son referenciados como las instancias
 	 2) Es una caracter de tipo numero de 32 bits que no tiene metodos, en cambio Integer es una clase que hace
 	 refencia a los numeros enteros y como tal se puede usar como wrapper ya que posee metodos
 	 3) Con int su valor predeterminado es 0, mientras que en Integer al no instanciarse su valor es null

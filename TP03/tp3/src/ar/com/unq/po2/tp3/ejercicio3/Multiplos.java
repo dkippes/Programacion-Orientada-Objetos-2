@@ -5,16 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Multiplos {
-	private Integer x;
-	private Integer y;
 	
-	public Multiplos() {
-		
-	}
-	
-	public Integer calcularMayorMultiplo() {
-		List<Integer> listaMultiplosX = listaDeMultiplos(this.getX());
-		List<Integer> listaMultiplosY = listaDeMultiplos(this.getY());
+	public Integer calcularMayorMultiplo(int x, int y) {
+		List<Integer> listaMultiplosX = listaDeMultiplos(x);
+		List<Integer> listaMultiplosY = listaDeMultiplos(y);
 		
 		for (int i = listaMultiplosX.size() - 1; i >= 0; i--) {
 			for (int j = listaMultiplosY.size() - 1; j >= 0; j--) {
@@ -36,21 +30,5 @@ public class Multiplos {
 			lista.add(numero * i);
 		}
 		return lista;
-	}
-
-	public Integer getX() {
-		return this.x;
-	}
-	
-	public Integer getY() {
-		return this.y;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-	
-	public void setY(int y) {
-		this.y = y;
 	}
 }

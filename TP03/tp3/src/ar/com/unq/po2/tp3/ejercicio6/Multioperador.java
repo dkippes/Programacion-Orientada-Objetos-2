@@ -2,7 +2,7 @@ package ar.com.unq.po2.tp3.ejercicio6;
 
 public class Multioperador {
 	
-	public Integer sumar(int[] numeros) {
+	public int sumar(int[] numeros) {
 		int contador = 0;
 		for(int i : numeros) {
 			contador += i;
@@ -10,7 +10,7 @@ public class Multioperador {
 		return contador;
 	}
 
-	public Integer restar(int[] numeros) {
+	public int restar(int[] numeros) {
 		int contador = 0;
 		for(int i : numeros) {
 			contador -= i;
@@ -18,7 +18,7 @@ public class Multioperador {
 		return contador;
 	}
 
-	public Integer multiplicar(int[] numeros) {
+	public int multiplicar(int[] numeros) {
 		int contador = 0;
 		for(int i : numeros) {
 			if(contador == 0) {

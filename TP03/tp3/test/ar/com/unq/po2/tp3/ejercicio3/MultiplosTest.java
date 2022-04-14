@@ -19,16 +19,12 @@ public class MultiplosTest {
 	@Test
 	@DisplayName("Should return 999")
 	void test() {
-		multiplos.setX(3);
-		multiplos.setY(9);
-		assertEquals(multiplos.calcularMayorMultiplo(), 999);
+		assertEquals(multiplos.calcularMayorMultiplo(3, 9), 999);
 	}
 	
 	@Test
 	@DisplayName("Should return -1")
 	void test0() {
-		multiplos.setX(0);
-		multiplos.setY(1);
-		assertEquals(multiplos.calcularMayorMultiplo(), -1);
+		assertEquals(multiplos.calcularMayorMultiplo(0, 1), -1);
 	}
 }
