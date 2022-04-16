@@ -1,7 +1,11 @@
-package supermercado;
+package supermercado.ejercicio1;
+
+
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import supermercado.ejercicio1.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
