@@ -3,20 +3,20 @@ package supermercado.ejercicio2;
 public class Producto {
 	private String nombre;
 	private double precio;
-	private boolean precioCuidado = false;
+	private boolean esPrecioCuidado = false;
 
 	public Producto(String nombre, double precio) {
 		this.nombre = nombre;
 		this.precio = precio;
 	}
 
-	public Producto(String nombre, double precio, boolean precioCuidado) {
+	public Producto(String nombre, double precio, boolean esPrecioCuidado) {
 		this(nombre, precio);
-		this.precioCuidado = precioCuidado;
+		this.esPrecioCuidado = esPrecioCuidado;
 	}
 
 	public boolean esPrecioCuidado() {
-		return precioCuidado;
+		return esPrecioCuidado;
 	}
 
 	public void aumentarPrecio(double precioAumentar) {

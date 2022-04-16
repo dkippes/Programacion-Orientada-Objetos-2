@@ -18,7 +18,7 @@ public class Supermercado {
 		this.direccion = direccion;
 	}
 
-	public Integer getCantidadDeProductos() {
+	public int getCantidadDeProductos() {
 		return this.productos.size();
 	}
 
