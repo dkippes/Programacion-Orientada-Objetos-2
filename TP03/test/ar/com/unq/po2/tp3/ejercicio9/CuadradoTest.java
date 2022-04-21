@@ -15,13 +15,13 @@ public class CuadradoTest {
 	@BeforeEach
 	void setUp() {
 		point = new Point(3, 3);
-		cuadrado = new Cuadrado(point);
+		cuadrado = new Cuadrado(point, point);
 	}
 
 	@Test
 	void shouldBeACuadrado() {
-		assertEquals(cuadrado.getPoint().getX(), 3);
-		assertEquals(cuadrado.getPoint().getY(), 3);
+		assertEquals(cuadrado.getPoint1().getX(), 3);
+		assertEquals(cuadrado.getPoint2().getY(), 3);
 	}
 	
 	@Test

@@ -11,13 +11,17 @@ public class RectanguloTest {
 	
 	Point point1;
 	Point point2;
+	Point point3;
 	Rectangulo rectangulo;
+	Cuadrado cuadrado;
 	
 	@BeforeEach
 	void setUp() {
 		point1 = new Point(3, 3);
 		point2 = new Point(2, 0);
+		point3 = new Point(6, 6);
 		rectangulo = new Rectangulo(point1, point2);
+		cuadrado = new Cuadrado(point1, point3);
 	}
 	
 	@Test
@@ -43,5 +47,22 @@ public class RectanguloTest {
 	@Test
 	void shouldKnowIfVerticalOrHorizontal() {
 		assertEquals(rectangulo.getPosition(), "vertical");
+	}
+	
+	@Test
+	void shouldBeACuadrado() {
+		assertEquals(cuadrado.getPoint1().getX(), 3);
+		assertEquals(cuadrado.getPoint2().getY(), 3);
+	}
+	
+	@Test
+	void shouldCalculateArea() {
+		assertEquals(cuadrado.calculateLado(), 3);
+		assertEquals(cuadrado.calculateArea(), 9);
+	}
+	
+	@Test
+	void shouldCalculatePerimetro() {
+		assertEquals(cuadrado.calculatePerimetro(), 12);
 	}
 }
