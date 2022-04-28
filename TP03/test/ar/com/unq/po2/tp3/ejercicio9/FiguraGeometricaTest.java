@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import ar.com.unq.po2.tp3.ejercicio8.Point;
 
-public class RectanguloTest {
+public class FiguraGeometricaTest {
 	
 	Point point1;
 	Point point2;
@@ -33,14 +33,14 @@ public class RectanguloTest {
 	}
 	
 	@Test
-	void shouldCalculateArea() {
+	void shouldCalculateAreaRectangule() {
 		assertEquals(rectangulo.calculateAltura(), 3);
 		assertEquals(rectangulo.calculateBase(), 1);
 		assertEquals(rectangulo.calculateArea(), 3);
 	}
 	
 	@Test
-	void shouldCalculatePerimetro() {
+	void shouldCalculatePerimetroRectangule() {
 		assertEquals(rectangulo.calculatePerimetro(), 8);
 	}
 	
@@ -52,17 +52,19 @@ public class RectanguloTest {
 	@Test
 	void shouldBeACuadrado() {
 		assertEquals(cuadrado.getPoint1().getX(), 3);
-		assertEquals(cuadrado.getPoint2().getY(), 3);
+		assertEquals(cuadrado.getPoint1().getY(), 3);
+		assertEquals(cuadrado.getPoint2().getX(), 6);
+		assertEquals(cuadrado.getPoint2().getY(), 6);
 	}
 	
 	@Test
-	void shouldCalculateArea() {
+	void shouldCalculateAreaCuadrado() {
 		assertEquals(cuadrado.calculateLado(), 3);
 		assertEquals(cuadrado.calculateArea(), 9);
 	}
 	
 	@Test
-	void shouldCalculatePerimetro() {
+	void shouldCalculatePerimetroCuadrado() {
 		assertEquals(cuadrado.calculatePerimetro(), 12);
 	}
 }
