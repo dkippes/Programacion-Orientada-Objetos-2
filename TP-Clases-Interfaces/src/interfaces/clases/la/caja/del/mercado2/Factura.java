@@ -1,5 +1,5 @@
 package interfaces.clases.la.caja.del.mercado2;
 
-public interface Factura {
-	public int montoAPagar();
+public abstract class Factura {
+	public abstract int montoAPagar();
 }

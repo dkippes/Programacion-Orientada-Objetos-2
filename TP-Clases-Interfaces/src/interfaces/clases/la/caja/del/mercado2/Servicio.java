@@ -1,6 +1,6 @@
 package interfaces.clases.la.caja.del.mercado2;
 
-public class Servicio implements Factura {
+public class Servicio extends Factura {
 	private int costoUnidad;
 	private int cantidadUnidades;
 	
