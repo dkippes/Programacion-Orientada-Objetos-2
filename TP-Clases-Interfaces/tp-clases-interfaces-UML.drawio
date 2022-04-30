@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-30T20:14:11.516Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="u6Gfhe2BGKwF4wS-qmtq" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-30T20:18:26.958Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="RboAOhl1C2CMN600Y4Fz" version="17.4.6" type="github">
   <diagram id="h2imKSvwqHgFwFgqD-qL" name="Page-1">
-    <mxGraphModel dx="1090" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1090" dy="535" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -360,6 +360,12 @@
         </mxCell>
         <mxCell id="vVhiKxb_t9OgOWYi2Gku-93" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Collection: En el caso de collection, no tiene el mensaje get, subList.&lt;br&gt;Si tiene el add y contails. Collection al ser el tipo mas Generico posible e interface contiene interfaces hijas como por ejemplo Arrays y Sets.&lt;br&gt;Por lo cual estas interfaces tienen su propio protocolo de mensajes las cuales definen los metodos faltantes de este enunciado.&lt;br&gt;&lt;br&gt;List: Es una interface que extiende de la interface Collection, esta interface si tiene los metodos definidos get, add, subList y contains.&lt;br&gt;&lt;br&gt;ArrayList: En el caso de la ArrayList es un tipo concreto de List ya mas especifico la cual tiene los metodos definidos get, add, subList y contains. Al instanciarla conviene tipearla con el tipo List ya que tiene los mismos metodos, a futuro tambien se podria cambiar por un LinkedList porque tiene el mismo protocolo de mensajes al implementar la interface List.&lt;br&gt;&lt;br&gt;LinkedList: Al igual que ArrayList es de tipo concreto e implementa List. Tiene todos los metodos señalados en el enunciado.&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
           <mxGeometry x="39" y="1760" width="750" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vVhiKxb_t9OgOWYi2Gku-94" value="&lt;font style=&quot;font-size: 24px&quot;&gt;De Smalltalk a Java: Personas y Mascotas&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="24" y="2060" width="463" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vVhiKxb_t9OgOWYi2Gku-95" value="&lt;font style=&quot;font-size: 18px&quot;&gt;- Dejo la imagen del archivo en la Carpeta (De Smalltalk a Java: Personas y Mascotas) de este TP.&lt;br&gt;nombre:&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="24" y="2110" width="750" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
