@@ -3,16 +3,14 @@ package interfaces.clases.la.caja.del.mercado2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Caja implements Agencia {
+public class Caja {
 	private Cliente cliente;
 	private Double monto;
 	private List<Producto> productos;
-	private List<Factura> facturas;
 	
 	public Caja(String nombre) {
 		this.cliente = new Cliente(nombre);
 		this.productos = new ArrayList<>();
-		this.facturas = new ArrayList<>();
 		this.monto = 0D;
 	}
 	
@@ -35,15 +33,5 @@ public class Caja implements Agencia {
 	
 	public Cliente getCliente() {
 		return this.cliente;
-	}
-	
-	public List<Factura> getFacturas() {
-		return facturas;
-	}
-
-	@Override
-	public void registrarPago(Factura factura) {
-		this.facturas.add(factura);
-	}
-	
+	}	
 }
