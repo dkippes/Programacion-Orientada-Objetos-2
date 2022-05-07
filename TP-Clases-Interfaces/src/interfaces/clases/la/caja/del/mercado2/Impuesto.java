@@ -1,6 +1,6 @@
 package interfaces.clases.la.caja.del.mercado2;
 
-public class Impuesto extends Factura {
+public class Impuesto implements Factura {
 	private int tasaServicio;
 	
 	public Impuesto(int tasaServicio) {
@@ -8,8 +8,7 @@ public class Impuesto extends Factura {
 	}
 
 	@Override
-	public int montoAPagar() {
-		return tasaServicio;
+	public double montoAPagar() {
+		return this.tasaServicio;
 	}
-	
 }

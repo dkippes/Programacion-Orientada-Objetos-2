@@ -8,16 +8,16 @@ public class Caja {
 	private Double monto;
 	private List<Producto> productos;
 	
-	public Caja(String nombre) {
-		this.cliente = new Cliente(nombre);
+	public Caja(Cliente cliente) {
+		this.cliente = cliente;
 		this.productos = new ArrayList<>();
 		this.monto = 0D;
 	}
 	
 	public Caja registrarProducto(Producto producto) {
-		if (producto.hasStock()) {
+		if (producto.getStock().hasStock()) {
 			this.productos.add(producto);
-			producto.reducirStock();
+			producto.getStock().reducirStockEn1();
 			this.monto += producto.getPrecio();
 		}
 		return this;

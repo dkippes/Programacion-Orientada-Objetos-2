@@ -1,11 +1,18 @@
 package interfaces.clases.la.caja.del.mercado2;
 
+import interfaces.clases.la.caja.del.mercado2.CalcularDescuento;
+import interfaces.clases.la.caja.del.mercado2.Stock;
+
 public class ProductoCooperativas extends Producto {
-	public ProductoCooperativas(double precio, int stock) {
-		super(aplicarIVA(precio), stock);
-	}
+	private CalcularDescuento calcularDescuento;
 	
-	private static double aplicarIVA(double precio) {
-		return precio - (precio * 0.1);
+	public ProductoCooperativas(double precio, int id, Stock stock, CalcularDescuento calcularDescuento) {
+		super(precio, id, stock);
+		this.calcularDescuento = calcularDescuento;
+	}
+
+	@Override
+	public double getPrecio() {
+		return precio - calcularDescuento.aplicarDescuento(precio);
 	}
 }

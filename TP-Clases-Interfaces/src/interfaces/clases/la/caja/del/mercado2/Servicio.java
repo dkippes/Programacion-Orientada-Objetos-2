@@ -1,16 +1,16 @@
 package interfaces.clases.la.caja.del.mercado2;
 
-public class Servicio extends Factura {
+public class Servicio implements Factura{
 	private int costoUnidad;
-	private int cantidadUnidades;
+	private int cantidadUnidadesConsumidas;
 	
-	public Servicio(int costoUnidad, int cantidadUnidades) {
+	public Servicio(int costoUnidad, int cantidadUnidadesConsumidas) {
 		this.costoUnidad = costoUnidad;
-		this.cantidadUnidades = cantidadUnidades;
+		this.cantidadUnidadesConsumidas = cantidadUnidadesConsumidas;
 	}
-	
+
 	@Override
-	public int montoAPagar() {
-		return costoUnidad * cantidadUnidades;
+	public double montoAPagar() {
+		return this.costoUnidad * this.cantidadUnidadesConsumidas;
 	}
 }

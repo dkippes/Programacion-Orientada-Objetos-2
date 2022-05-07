@@ -1,23 +1,19 @@
 package interfaces.clases.la.caja.del.mercado;
 
 public abstract class Producto {
-	private double precio;
-	private int stock;
+	protected double precio;
+	protected int id;
+	protected Stock stock;
 	
-	public Producto(double precio, int stock) {
+	public Producto(double precio, int id, Stock stock) {
 		this.precio = precio;
+		this.id = id;
 		this.stock = stock;
 	}
 	
-	public boolean hasStock() {
-		return this.stock > 0;
+	public Stock getStock() {
+		return this.stock;
 	}
 	
-	public double getPrecio() {
-		return precio;
-	}
-	
-	public void reducirStock() {
-		this.stock--;
-	}
+	public abstract double getPrecio();
 }

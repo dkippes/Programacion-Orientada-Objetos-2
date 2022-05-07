@@ -3,21 +3,25 @@ package interfaces.clases.la.caja.del.mercado2;
 import java.util.ArrayList;
 import java.util.List;
 
+import interfaces.clases.la.caja.del.mercado2.Cliente;
+import interfaces.clases.la.caja.del.mercado2.Producto;
+
 public class Caja {
 	private Cliente cliente;
 	private Double monto;
 	private List<Producto> productos;
+	private Agencia agencia;
 	
-	public Caja(String nombre) {
-		this.cliente = new Cliente(nombre);
+	public Caja(Cliente cliente) {
+		this.cliente = cliente;
 		this.productos = new ArrayList<>();
 		this.monto = 0D;
 	}
 	
 	public Caja registrarProducto(Producto producto) {
-		if (producto.hasStock()) {
+		if (producto.getStock().hasStock()) {
 			this.productos.add(producto);
-			producto.reducirStock();
+			producto.getStock().reducirStockEn1();
 			this.monto += producto.getPrecio();
 		}
 		return this;
@@ -33,5 +37,9 @@ public class Caja {
 	
 	public Cliente getCliente() {
 		return this.cliente;
-	}	
+	}
+	
+	public void setAgencia(Agencia agencia) {
+		this.agencia = agencia;
+	}
 }

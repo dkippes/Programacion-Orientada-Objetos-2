@@ -15,10 +15,11 @@ public class CajaTest {
 
 	@BeforeEach
 	void setUp() {
-		caja = new Caja("Diego");
-		producto1 = new ProductoEmpresasTradicionales(100D, 10);
-		producto2 = new ProductoCooperativas(100D, 1);
-		producto3 = new ProductoCooperativas(1000000D, 0);
+		Cliente cliente = new Cliente("Diego");
+		caja = new Caja(cliente);
+		producto1 = new ProductoEmpresasTradicionales(100D, 1, new Stock(10));
+		producto2 = new ProductoCooperativas(100D, 2, new Stock(1), new CalcularDescuento(0.1));
+		producto3 = new ProductoCooperativas(1000000D, 3, new Stock(0), new CalcularDescuento(10));
 	}
 	
 	@Test

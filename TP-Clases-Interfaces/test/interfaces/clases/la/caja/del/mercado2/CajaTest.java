@@ -5,56 +5,45 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.*;
+
+import java.util.List;
 
 public class CajaTest {
 
 	Caja caja;
 	Factura factura;
 	Factura factura2;
+	AgenciaRecaudadora agencia;
 
 	@BeforeEach
 	void setUp() {
-		caja = new Caja("Diego");
+		caja = new Caja(new Cliente("Diego"));
+		agencia = new AgenciaRecaudadora();
+		caja.setAgencia(agencia);
 		factura = new Impuesto(1000);
 		factura2 = new Servicio(10, 20);
 	}
 	
 	@Test
-	@DisplayName("Crea una caja sin facturas")
-	void testCreaUnaCaja() {
-		assertEquals(caja.getCliente().getNombre(), "Diego");
-		assertEquals(caja.getFacturas().size(), 0);
+	@DisplayName("Registra un impuesto a la agencia")
+	void testRegistrandoUnImpuesto() {
+		agencia.registrarPago(factura);
+		assertEquals(agencia.getPagos(), List.of(1000D));
 	}
 	
 	@Test
-	@DisplayName("Crea una caja y agrega una factura de impuesto")
-	void testCreaUnaCajaYRegistraUnaFacturaImpuesto() {
-		assertEquals(caja.getCliente().getNombre(), "Diego");
-		caja.registrarPago(factura);
-		assertEquals(caja.getFacturas().size(), 1);
-		assertEquals(caja.getFacturas().get(0).montoAPagar(), 1000);
+	@DisplayName("Registra un servicio a la agencia")
+	void testRegistrandoUnServicio() {
+		agencia.registrarPago(factura2);
+		assertEquals(agencia.getPagos(), List.of(200D));
 	}
 	
 	@Test
-	@DisplayName("Crea una caja y agrega una factura de servicio")
-	void testCreaUnaCajaYRegistraUnaFacturaServicio() {
-		assertEquals(caja.getCliente().getNombre(), "Diego");
-		caja.registrarPago(factura2);
-		assertEquals(caja.getFacturas().size(), 1);
-		assertEquals(caja.getFacturas().get(0).montoAPagar(), 200);
-	}
-	
-	@Test
-	@DisplayName("Crea una caja y agrega una factura de servicio y otra de impuesto")
-	void testCreaUnaCajaYRegistraUnaFacturaServicioEImpuesto() {
-		assertEquals(caja.getCliente().getNombre(), "Diego");
-		caja.registrarPago(factura);
-		caja.registrarPago(factura2);
-		assertEquals(caja.getFacturas().size(), 2);
-		assertEquals(caja.getFacturas()
-				.stream()
-				.mapToInt(f -> f.montoAPagar())
-				.sum()
-				, 1200);
+	@DisplayName("Registra un impuesto y un servicio a la agencia")
+	void testRegistrandoUnImpuestoYServicio() {
+		agencia.registrarPago(factura);
+		agencia.registrarPago(factura2);
+		assertEquals(agencia.getPagos(), List.of(1000D, 200D));
 	}
 }
