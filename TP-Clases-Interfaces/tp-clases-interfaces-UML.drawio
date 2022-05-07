@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-07T04:54:48.668Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="Mk8v9Fazq4vYmyIoYkuO" version="17.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-07T05:00:02.492Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="b6TYAyrQctKSMA9ASqFR" version="17.5.0" type="github">
   <diagram id="h2imKSvwqHgFwFgqD-qL" name="Page-1">
     <mxGraphModel dx="2871" dy="1004" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -60,12 +60,6 @@
         </mxCell>
         <mxCell id="vVhiKxb_t9OgOWYi2Gku-93" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Collection: En el caso de collection, no tiene el mensaje get, subList.&lt;br&gt;Si tiene el add y contails. Collection al ser el tipo mas Generico posible e interface contiene interfaces hijas como por ejemplo Arrays y Sets.&lt;br&gt;Por lo cual estas interfaces tienen su propio protocolo de mensajes las cuales definen los metodos faltantes de este enunciado.&lt;br&gt;&lt;br&gt;List: Es una interface que extiende de la interface Collection, esta interface si tiene los metodos definidos get, add, subList y contains.&lt;br&gt;&lt;br&gt;ArrayList: En el caso de la ArrayList es un tipo concreto de List ya mas especifico la cual tiene los metodos definidos get, add, subList y contains. Al instanciarla conviene tipearla con el tipo List ya que tiene los mismos metodos, a futuro tambien se podria cambiar por un LinkedList porque tiene el mismo protocolo de mensajes al implementar la interface List.&lt;br&gt;&lt;br&gt;LinkedList: Al igual que ArrayList es de tipo concreto e implementa List. Tiene todos los metodos señalados en el enunciado.&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
           <mxGeometry x="39" y="1760" width="750" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="vVhiKxb_t9OgOWYi2Gku-94" value="&lt;font style=&quot;font-size: 24px&quot;&gt;De Smalltalk a Java: Personas y Mascotas&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="24" y="2060" width="463" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="vVhiKxb_t9OgOWYi2Gku-95" value="&lt;font style=&quot;font-size: 18px&quot;&gt;- Dejo la imagen del archivo en la Carpeta (De Smalltalk a Java: Personas y Mascotas) de este TP.&lt;br&gt;nombre:&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
-          <mxGeometry x="24" y="2110" width="750" height="40" as="geometry" />
         </mxCell>
         <mxCell id="gRFT-Wpe63Sl7lDczQc_-9" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.516;exitDx=0;exitDy=0;endArrow=none;endFill=0;rounded=0;startArrow=block;startFill=1;exitPerimeter=0;entryX=1.009;entryY=0.228;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gRFT-Wpe63Sl7lDczQc_-62" target="s8EH2hZSlrzV0o0GCKrY-9">
           <mxGeometry relative="1" as="geometry">
