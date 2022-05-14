@@ -16,12 +16,12 @@ public class PokerStatusTest {
 
     @Test
     void testNoHayNingunaJugada() {
-        assertEquals("Nada", pokerStatus.verificar("8D", "10D", "3T", "3T", "8T"));
+        assertEquals("Nada", pokerStatus.verificar("8DR", "10DR", "3TN", "3TN", "8TR"));
     }
     
     @Test
     void testSiHayPoker() {
-        assertEquals("Poker", pokerStatus.verificar("8D", "8D", "8T", "10D", "8T"));
+        assertEquals("Poker", pokerStatus.verificar("8DR", "8DN", "8TR", "10DN", "8TR"));
     }
     
     @Test
@@ -31,11 +31,11 @@ public class PokerStatusTest {
     
     @Test
     void testColor() {
-        assertEquals("Color", pokerStatus.verificar("3T", "3T", "3T", "3T", "3T"));
+        assertEquals("Color", pokerStatus.verificar("8TR", "8TR", "4TR", "3TR", "3TR"));
     }
     
     @Test
     void testTrio() {
-        assertEquals("Trio", pokerStatus.verificar("8D", "10D", "10D", "10D", "8T"));
+        assertEquals("Trio", pokerStatus.verificar("8DR", "10DR", "10DN", "10DN", "8TR"));
     }
 }

@@ -3,10 +3,12 @@ package test.testdoubles.cartasdepoquer;
 public class Carta {
 	private String palo;
 	private String valor;
+	private String color;
 
-	public Carta(String valor, String palo) {
+	public Carta(String valor, String palo, String color) {
 		this.valor = valor;
 		this.palo = palo;
+		this.color = color;
 	}
 
 	public String getValor() {
@@ -15,6 +17,10 @@ public class Carta {
 
 	public String getPalo() {
 		return palo;
+	}
+	
+	public String getColor() {
+		return color;
 	}
 
 	public boolean esMismoPaloQue(Carta cartaAComparar) {
@@ -41,5 +47,9 @@ public class Carta {
 
 	public boolean esMismoValorQue(Carta unaCarta) {
 		return valor.equals(unaCarta.getValor());
+	}
+
+	public boolean esMismoColor(Carta unaCarta) {
+		return this.color.equals(unaCarta.getColor());
 	}
 }

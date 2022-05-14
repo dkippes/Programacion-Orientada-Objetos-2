@@ -22,7 +22,16 @@ public class Jugada {
 		return tipoJugada;
 	}
 	
+	public List<Carta> getCartas() {
+		return cartas;
+	}
+	
 	public void setTipoJugada(TipoJugada tipoJugada) {
 		this.tipoJugada = tipoJugada;
+	}
+
+	@Override
+	public String toString() {
+		return "Jugada [tipoJugada=" + tipoJugada + ", cartas=" + cartas + "]";
 	}
 }

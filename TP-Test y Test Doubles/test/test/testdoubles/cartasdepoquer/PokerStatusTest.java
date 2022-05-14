@@ -12,10 +12,10 @@ public class PokerStatusTest {
     @BeforeEach
     void setUp() throws Exception {
         pokerStatus = new PokerStatus();
-        ochoD = new Carta("8", "D");
-        ochoT = new Carta("8", "T");
-        diezD = new Carta("10", "D");
-        tresT = new Carta("3", "T");
+        ochoD = new Carta("8", "D", "R");
+        ochoT = new Carta("8", "T", "R");
+        diezD = new Carta("10", "D", "N");
+        tresT = new Carta("3", "T", "N");
     }
 
     @Test
@@ -35,7 +35,7 @@ public class PokerStatusTest {
     
     @Test
     void testColor() {
-        assertEquals("Color", pokerStatus.verificar(tresT, tresT, tresT, tresT, tresT));
+        assertEquals("Color", pokerStatus.verificar(tresT, tresT, diezD, diezD, tresT));
     }
     
     @Test

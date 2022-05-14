@@ -9,10 +9,10 @@ public class PokerStatus {
 	}
 
 	private String jugadaMasSignificativaEn(List<Carta> cartas) {
-		if (hayColorEn(cartas, cartas.get(0)))
-			return "Color";
 		if (cartas.stream().anyMatch(carta -> hayPokerEn(cartas, carta)))
 			return "Poker";
+		if (hayColorEn(cartas, cartas.get(0)))
+			return "Color";
 		if (cartas.stream().anyMatch(carta -> hayTrioEn(cartas, carta)))
 			return "Trio";
 		return "Nada";
@@ -23,7 +23,7 @@ public class PokerStatus {
 	}
 
 	private boolean hayColorEn(List<Carta> listaDeCartas, Carta unaCarta) {
-		return listaDeCartas.stream().allMatch(carta -> carta.esMismoPaloQue(unaCarta));
+		return listaDeCartas.stream().allMatch(carta -> carta.esMismoColor(unaCarta));
 	}
 
 	private boolean hayTrioEn(List<Carta> listaDeCartas, Carta unaCarta) {

@@ -1,8 +1,6 @@
 package test.testdoubles.poquercontinuacion;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PokerStatus {
 
@@ -12,10 +10,10 @@ public class PokerStatus {
 	}
 
 	private String jugadaMasSignificativaEn(List<String> cartas) {
-		if (hayColorEn(cartas, cartas.get(0)))
-			return "Color";
 		if (cartas.stream().anyMatch(carta -> hayPokerEn(cartas, carta)))
 			return "Poker";
+		if (hayColorEn(cartas, cartas.get(0)))
+			return "Color";
 		if (cartas.stream().anyMatch(carta -> hayTrioEn(cartas, carta)))
 			return "Trio";
 		return "Nada";
@@ -26,7 +24,8 @@ public class PokerStatus {
 	}
 
 	private boolean hayColorEn(List<String> listaDeCartas, String unaCarta) {
-		return listaDeCartas.stream().allMatch(carta -> carta.contains(paloDe(unaCarta)));
+		String colorDePrimeraCarta = colorDe(unaCarta);
+		return listaDeCartas.stream().allMatch(carta -> carta.contains(colorDePrimeraCarta));
 	}
 
 	private boolean hayTrioEn(List<String> listaDeCartas, String unaCarta) {
@@ -34,10 +33,14 @@ public class PokerStatus {
 	}
 
 	private String paloDe(String unaCarta) {
+		return unaCarta.substring(unaCarta.length() - 2);
+	}
+	
+	private String colorDe(String unaCarta) {
 		return unaCarta.substring(unaCarta.length() - 1);
 	}
 
 	private String valorDe(String unaCarta) {
-		return unaCarta.substring(0, unaCarta.length() - 1);
+		return unaCarta.substring(0, unaCarta.length() - 2);
 	}
 }
