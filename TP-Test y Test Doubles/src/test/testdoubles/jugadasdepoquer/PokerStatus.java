@@ -2,22 +2,23 @@ package test.testdoubles.jugadasdepoquer;
 
 import java.util.List;
 
-import test.testdoubles.cartasdepoquer.Carta;
-
 public class PokerStatus {
-	public String verificar(Carta cartaUno, Carta cartaDos, Carta cartaTres, Carta cartaCuatro, Carta cartaCinco) {
+	private Jugada jugada;
+	
+	public Jugada verificar(Carta cartaUno, Carta cartaDos, Carta cartaTres, Carta cartaCuatro, Carta cartaCinco) {
 		List<Carta> cartas = List.of(cartaUno, cartaDos, cartaTres, cartaCuatro, cartaCinco);
 		return jugadaMasSignificativaEn(cartas);
 	}
 
-	private String jugadaMasSignificativaEn(List<Carta> cartas) {
-		if (hayColorEn(cartas, cartas.get(0)))
-			return "Color";
+	private Jugada jugadaMasSignificativaEn(List<Carta> cartas) {
+		this.jugada = new Jugada(new Nada(), cartas);
 		if (cartas.stream().anyMatch(carta -> hayPokerEn(cartas, carta)))
-			return "Poker";
+			jugada.setTipoJugada(new Poker());
+		if (hayColorEn(cartas, cartas.get(0)))
+			jugada.setTipoJugada(new Color());
 		if (cartas.stream().anyMatch(carta -> hayTrioEn(cartas, carta)))
-			return "Trio";
-		return "Nada";
+			jugada.setTipoJugada(new Trio());
+		return jugada;
 	}
 
 	private boolean hayPokerEn(List<Carta> listaDeCartas, Carta unaCarta) {

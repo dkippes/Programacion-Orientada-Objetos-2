@@ -42,4 +42,8 @@ public class Caja {
 	public void setAgencia(Agencia agencia) {
 		this.agencia = agencia;
 	}
+	
+	public void registrarPagoEnAgencia(Factura factura) {
+		this.agencia.registrarPago(factura);
+	}
 }

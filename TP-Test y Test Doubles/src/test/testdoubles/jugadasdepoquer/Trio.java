@@ -1,0 +1,8 @@
+package test.testdoubles.jugadasdepoquer;
+
+public class Trio implements TipoJugada {
+	@Override
+	public boolean esMejorQue(TipoJugada tipo) {
+		return tipo.equals(new Poker()) || tipo.equals(new Color());
+	}
+}

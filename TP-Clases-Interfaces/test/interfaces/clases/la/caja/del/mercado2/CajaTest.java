@@ -28,22 +28,22 @@ public class CajaTest {
 	@Test
 	@DisplayName("Registra un impuesto a la agencia")
 	void testRegistrandoUnImpuesto() {
-		agencia.registrarPago(factura);
+		caja.registrarPagoEnAgencia(factura);
 		assertEquals(agencia.getPagos(), List.of(1000D));
 	}
 	
 	@Test
 	@DisplayName("Registra un servicio a la agencia")
 	void testRegistrandoUnServicio() {
-		agencia.registrarPago(factura2);
+		caja.registrarPagoEnAgencia(factura2);
 		assertEquals(agencia.getPagos(), List.of(200D));
 	}
 	
 	@Test
 	@DisplayName("Registra un impuesto y un servicio a la agencia")
 	void testRegistrandoUnImpuestoYServicio() {
-		agencia.registrarPago(factura);
-		agencia.registrarPago(factura2);
+		caja.registrarPagoEnAgencia(factura);
+		caja.registrarPagoEnAgencia(factura2);
 		assertEquals(agencia.getPagos(), List.of(1000D, 200D));
 	}
 }

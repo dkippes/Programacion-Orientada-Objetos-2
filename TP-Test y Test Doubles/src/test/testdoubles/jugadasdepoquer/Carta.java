@@ -1,7 +1,5 @@
 package test.testdoubles.jugadasdepoquer;
 
-import test.testdoubles.cartasdepoquer.Carta;
-
 public class Carta {
 	private String palo;
 	private String valor;
