@@ -7,11 +7,6 @@ public class Trio implements TipoJugada {
 	}
 	
 	@Override
-	public String toString() {
-		return "Trio";
-	}
-	
-	@Override
 	public boolean equals(Object o) {
 		return getClass() == o.getClass();
 	}

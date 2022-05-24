@@ -28,11 +28,11 @@ public class Carta {
 	}
 
 	public boolean esSuperiorA(Carta cartaAComparar) {
-		return valorNumericoDe(valor) > valorNumericoDe(cartaAComparar.getValor());
+		return this.valorNumerico() > cartaAComparar.valorNumerico();
 	}
 
-	private int valorNumericoDe(String valorDeUnaCarta) {
-		switch (valorDeUnaCarta) {
+	public int valorNumerico() {
+		switch (valor) {
 		case "J":
 			return 11;
 		case "Q":
@@ -42,7 +42,7 @@ public class Carta {
 		case "A":
 			return 14;
 		}
-		return Integer.valueOf(valorDeUnaCarta);
+		return Integer.valueOf(valor);
 	}
 
 	public boolean esMismoValorQue(Carta unaCarta) {
@@ -51,10 +51,5 @@ public class Carta {
 	
 	public boolean esMismoColor(Carta unaCarta) {
 		return this.color.equals(unaCarta.getColor());
-	}
-
-	@Override
-	public String toString() {
-		return "Carta [palo=" + palo + ", valor=" + valor + ", color=" + color + "]";
 	}
 }
