@@ -97,22 +97,4 @@ public class JugadaTest {
 		when(jugada2.getCartas()).thenReturn(List.of(ochoD, ochoD, ochoD, ochoD, ochoD));
 		assertTrue(jugada.soyGanadora(jugada2));
 	}
-	
-	@Test
-	void testNoGanaLaJugadaPorqueNoTieneTantaValoracionDeCartas() {
-		Jugada jugada = new Jugada(new Color(), List.of(
-				new Carta("8", "D", "R"), 
-				new Carta("8", "D", "R"), 
-				new Carta("8", "D", "R"), 
-				new Carta("8", "D", "R"), 
-				new Carta("8", "D", "R")));
-		cartas.add(new Carta("10", "D", "R"));
-		cartas.add(new Carta("8", "D", "R"));
-		cartas.add(new Carta("8", "D", "R"));
-		cartas.add(new Carta("8", "D", "R"));
-		cartas.add(new Carta("J", "D", "R"));
-		when(jugada2.getTipo()).thenReturn(new Color());
-		when(jugada2.getCartas()).thenReturn(cartas);
-		assertFalse(jugada.soyGanadora(jugada2));
-	}
 }

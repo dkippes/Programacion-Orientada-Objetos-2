@@ -1,3 +1,8 @@
-Mockito
+1) Los son test double son test unitarios donde el un componente que tiene la clase a testear
+se sustituye por un objeto falso.
 
-Test Doubles
+2) Existen varios tipos de test doubles, dummy, stub, mock y spy
+Dummy = es un objeto que nunca se usa, es para rellenar
+Stub = Es un objeto tonto, pero nos da llamadas pre programadas
+Mock = Es como un stub pero se puede verificar si la llamada fue hecha por el DOC
+Spy = Es como un mock pero llama a los metodos concretos de la clase tonta 
