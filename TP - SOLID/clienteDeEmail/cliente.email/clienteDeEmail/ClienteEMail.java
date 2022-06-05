@@ -1,26 +1,22 @@
-package openClosedPrinciple.caso1;
+package clienteDeEmail;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteEMail {
+	private ServidorEmail servidor;
+	private String nombreUsuario;
+	private String passusuario;
+	private List<Correo> inbox;
+	private List<Correo> borrados;
 	
-	 ServidorPop servidor;
-	 String nombreUsuario;
-	 String passusuario;
-	 ArrayList<Correo> inbox;
-	private ArrayList<Correo> borrados;
-	
-	public ClienteEMail(ServidorPop servidor, String nombreUsuario, String pass){
+	public ClienteEMail(ServidorEmail servidor, String nombreUsuario, String pass) throws Exception{
 		this.servidor=servidor;
 		this.nombreUsuario=nombreUsuario;
 		this.passusuario=pass;
 		this.inbox = new ArrayList<Correo>();
 		this.borrados = new ArrayList<Correo>();
-		this.conectar();
-	}
-	
-	public void conectar(){
-		this.servidor.conectar(this.nombreUsuario,this.passusuario);
+		servidor.conectar(this);
 	}
 	
 	public void borrarCorreo(Correo correo){
@@ -41,12 +37,11 @@ public class ClienteEMail {
 	}
 	
 	public void recibirNuevos(){
-		this.servidor.recibirNuevos(this.nombreUsuario, this.passusuario);
+		this.servidor.recibirNuevos(this);
 	}
 	
 	public void enviarCorreo(String asunto, String destinatario, String cuerpo){
 		Correo correo = new Correo(asunto, destinatario, cuerpo);
 		this.servidor.enviar(correo);
 	}
-
 }
