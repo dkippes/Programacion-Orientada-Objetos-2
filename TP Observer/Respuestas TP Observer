@@ -1,0 +1,13 @@
+Ejercicio 0 - Diferentes alternativas de Observer
+
+simpleObserver: La ventaja es que se sencilla de implementar, pero los bomberos no sabrian que cambio al ser
+notificados. Ademas estarian siendo llamados todo el tiempo
+
+complexObserver: Es mas especifico que el simpleObserver pero es un solo sensor
+
+complexWithListener: Es una solucion mas elegante, y permite abstraer mas el observable asi como tambien
+tener mas observadores que escuchen
+
+Para que una clase observadora observe a mas de un sensor se tendria que hacer una interface que sea polimorfica
+y tenga un protocolo para diferentes sensores.
+En este caso se tendria que implementar el SensorListener
